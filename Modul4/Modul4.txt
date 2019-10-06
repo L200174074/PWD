@@ -1,0 +1,23 @@
+#No 7
+
+SELECT Mahasiswa.NIM, Mahasiswa.Nama, Nilai.Nama_MK, Nilai.Nilai_Angka, Nilai.Nilai_Huruf FROM
+(Mahasiswa RIGHT JOIN Nilai ON Mahasiswa.NIM=Nilai.NIM)
+
+#No 8
+
+SELECT AVG(Nilai_Angka) 'Rata-rata Nilai' FROM Nilai
+
+#No 9
+
+SELECT SUM(Nilai_Angka) 'Total Nila' FROM Nilai
+
+#No 10
+
+CREATE VIEW KHS AS SELECT Mahasiswa.NIM, Nilai.Nama_MK, Nilai.Nilai_Angka, Nilai.Nilai_Huruf FROM 
+(Mahasiswa INNER JOIN Nilai ON Mahasiswa.NIM=Nilai.NIM)
+
+SELECT * FROM KHS
+
+TUGAS 
+
+UPDATE Mahasiswa SET Alamat = 'Sragen' WHERE NIM = 'L20008080'
